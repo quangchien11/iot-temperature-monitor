@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="456" height="456" viewBox="0 0 456 456" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Biểu tượng nhiệt kế đơn giản -->
+  <rect x="208" y="120" width="40" height="150" rx="20" fill="white"/>
+  <circle cx="228" cy="300" r="45" fill="white"/>
+  <rect x="218" y="180" width="20" height="120" fill="#0D6EFD"/>
+  <circle cx="228" cy="300" r="28" fill="#DC3545"/>
+</svg>

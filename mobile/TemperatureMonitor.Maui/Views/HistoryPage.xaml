@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemperatureMonitor.Maui.Views.HistoryPage"
+             Title="Lịch sử"
+             BackgroundColor="{StaticResource PageBg}">
+    <RefreshView x:Name="Refresh" Refreshing="OnRefreshing">
+        <CollectionView x:Name="ListView">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="8" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.Header>
+                <Border Margin="16,16,16,4" Padding="16,12" Stroke="Transparent">
+                    <Border.StrokeShape><RoundRectangle CornerRadius="14" /></Border.StrokeShape>
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="{StaticResource Primary}" Offset="0.0" />
+                            <GradientStop Color="{StaticResource Accent}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid ColumnDefinitions="*,*,1.4*,Auto">
+                        <Label Grid.Column="0" Text="Nhiệt độ" TextColor="White" FontAttributes="Bold" FontSize="13" />
+                        <Label Grid.Column="1" Text="Độ ẩm" TextColor="White" FontAttributes="Bold" FontSize="13" />
+                        <Label Grid.Column="2" Text="Thời gian" TextColor="White" FontAttributes="Bold" FontSize="13" />
+                        <Label Grid.Column="3" Text="Trạng thái" TextColor="White" FontAttributes="Bold" FontSize="13" />
+                    </Grid>
+                </Border>
+            </CollectionView.Header>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="16,0" Padding="16,12" BackgroundColor="{StaticResource CardBg}" Stroke="Transparent">
+                        <Border.StrokeShape><RoundRectangle CornerRadius="12" /></Border.StrokeShape>
+                        <Grid ColumnDefinitions="*,*,1.4*,Auto" VerticalOptions="Center">
+                            <Label Grid.Column="0" Text="{Binding Temperature, StringFormat='{0:0.0}°C'}"
+                                   FontAttributes="Bold" TextColor="{StaticResource Gray900}" VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="{Binding Humidity, StringFormat='{0:0.0}%'}"
+                                   TextColor="{StaticResource Gray900}" VerticalOptions="Center" />
+                            <Label Grid.Column="2" Text="{Binding TimeText}" FontSize="12"
+                                   TextColor="{StaticResource Gray500}" VerticalOptions="Center" />
+                            <Label Grid.Column="3" Text="{Binding StatusText}" TextColor="{Binding StatusColor}"
+                                   FontAttributes="Bold" FontSize="12" VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.Footer>
+                <BoxView HeightRequest="16" Color="Transparent" />
+            </CollectionView.Footer>
+
+            <CollectionView.EmptyView>
+                <Label Text="Chưa có dữ liệu." HorizontalOptions="Center" Margin="0,40" TextColor="{StaticResource Gray500}" />
+            </CollectionView.EmptyView>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

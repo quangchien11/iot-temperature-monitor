@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemperatureMonitor.Maui.Views.ChartPage"
+             Title="Biểu đồ"
+             BackgroundColor="{StaticResource PageBg}">
+    <VerticalStackLayout Padding="16" Spacing="14">
+
+        <!-- Chọn khoảng thống kê (segmented dạng pill) -->
+        <Border BackgroundColor="#E7EDF6" Padding="4" Stroke="Transparent">
+            <Border.StrokeShape><RoundRectangle CornerRadius="14" /></Border.StrokeShape>
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="4">
+                <Button Grid.Column="0" x:Name="BtnHourly" Text="Giờ" Clicked="OnPeriodClicked"
+                        CommandParameter="hourly" BackgroundColor="{StaticResource Primary}" TextColor="White"
+                        FontAttributes="Bold" CornerRadius="11" HeightRequest="40" />
+                <Button Grid.Column="1" x:Name="BtnDaily" Text="Ngày" Clicked="OnPeriodClicked"
+                        CommandParameter="daily" BackgroundColor="Transparent" TextColor="{StaticResource Gray900}"
+                        CornerRadius="11" HeightRequest="40" />
+                <Button Grid.Column="2" x:Name="BtnWeekly" Text="Tuần" Clicked="OnPeriodClicked"
+                        CommandParameter="weekly" BackgroundColor="Transparent" TextColor="{StaticResource Gray900}"
+                        CornerRadius="11" HeightRequest="40" />
+            </Grid>
+        </Border>
+
+        <!-- Biểu đồ -->
+        <Border BackgroundColor="{StaticResource CardBg}" Padding="8" Stroke="Transparent" HeightRequest="340">
+            <Border.StrokeShape><RoundRectangle CornerRadius="18" /></Border.StrokeShape>
+            <Border.Shadow><Shadow Brush="#99A8C0" Offset="0,4" Radius="12" Opacity="0.20" /></Border.Shadow>
+            <GraphicsView x:Name="ChartView" />
+        </Border>
+
+        <!-- Chú thích -->
+        <Border BackgroundColor="{StaticResource CardBg}" Padding="12" Stroke="Transparent">
+            <Border.StrokeShape><RoundRectangle CornerRadius="14" /></Border.StrokeShape>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="22">
+                <Label Text="● Cao nhất" TextColor="{StaticResource Danger}" FontSize="13" />
+                <Label Text="● Trung bình" TextColor="{StaticResource Primary}" FontSize="13" />
+                <Label Text="● Thấp nhất" TextColor="{StaticResource Tertiary}" FontSize="13" />
+            </HorizontalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
