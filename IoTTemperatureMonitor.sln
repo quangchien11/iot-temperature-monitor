@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{76FF19AC-98DA-4B21-A889-43FDCC9B6371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureApi", "backend\TemperatureApi\TemperatureApi.csproj", "{4DF1B6A5-9A25-4432-A413-11EC7E4F83F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "winform", "winform", "{30C5B668-ACB7-4579-B142-19FACE7DBE5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureMonitor.WinForms", "winform\TemperatureMonitor.WinForms\TemperatureMonitor.WinForms.csproj", "{C9D735C2-40AA-4513-9D6E-5AE582A53239}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mobile", "mobile", "{E9D88695-38F5-466A-97D1-CEC5789242CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureMonitor.Maui", "mobile\TemperatureMonitor.Maui\TemperatureMonitor.Maui.csproj", "{E1A9503B-13ED-428E-A753-3B836885A47A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DF1B6A5-9A25-4432-A413-11EC7E4F83F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF1B6A5-9A25-4432-A413-11EC7E4F83F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF1B6A5-9A25-4432-A413-11EC7E4F83F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF1B6A5-9A25-4432-A413-11EC7E4F83F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D735C2-40AA-4513-9D6E-5AE582A53239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D735C2-40AA-4513-9D6E-5AE582A53239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D735C2-40AA-4513-9D6E-5AE582A53239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D735C2-40AA-4513-9D6E-5AE582A53239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1A9503B-13ED-428E-A753-3B836885A47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A9503B-13ED-428E-A753-3B836885A47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4DF1B6A5-9A25-4432-A413-11EC7E4F83F8} = {76FF19AC-98DA-4B21-A889-43FDCC9B6371}
+		{C9D735C2-40AA-4513-9D6E-5AE582A53239} = {30C5B668-ACB7-4579-B142-19FACE7DBE5C}
+		{E1A9503B-13ED-428E-A753-3B836885A47A} = {E9D88695-38F5-466A-97D1-CEC5789242CC}
+	EndGlobalSection
+EndGlobal
